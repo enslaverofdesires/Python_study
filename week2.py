@@ -1,7 +1,8 @@
 #Calculator 
-"""
+
 a = int(input("Введите первое число:\n"))
 operand = input("какое действие необходимо выполнить:\n")
+res = 0
 if operand == "**":
 	b = int(input("В какую степень возвести?:\n"))
 	res	= (a ** b)
@@ -18,26 +19,34 @@ else:
 		res = (a - b)
 	elif operand == "*":
 		res = (a * b)
-	elif operand == "/":
+		print(f"Результат вычисления равен: {round(res)}")	
+	if operand == "/":
 		if b > a:
 			res = 0
 			print("Нацело не делится")
+		elif b == 0:
+			try:
+				res = a / b
+			except ZeroDivisionError:
+				res = "-"	
+			print(f"Делитель равен 0. Результат {res}")	
 		else:
 			if a % b == 0:
-				print("Деление без остатка")
+				res = (a / b)
+				print(f"Деление без остатка. Результат вычисления равен: {round(res)}")	
+				
 			else:
 				res = a % b
 				print(f"Делится с остатком. Остаток равен {res}")
-			if b == 0:
-				print("Делитель равен 0")
-				res = "-"
-			else:
-				res = (a / b)
 	else:
-		print("Введена не корректная операция")
-		res = "-"
-print(f"Результат вычисления равен: {round(res)}")
+		print("Неверный ввод")		
 
+
+
+
+
+
+"""
 #делится/не делится
 
 x = int(input("Введите первое число:\n"))
@@ -192,7 +201,7 @@ print(list)
 """
 
 #2
-
+"""
 h, m = input("Введите время: ").split()
 h = int(h)
 m = int(m)
@@ -203,9 +212,15 @@ elif h == 0:
 	x = 10
 if m == 00:
 	y = 00
-if 1 <= h <= 5:
+if 1 <= h <= 11:
 	x = 12 - h 
-elif 7 <= h <= 11:
-	x = 10 - h
+# elif 7 <= h <= 11:
+# 	x = 10 - h
 print(x, y)
-	
+"""
+"""
+a = int(input("enter number: "))
+while false:
+	x = str(a.isdigit())
+	print("invalid enter")	
+"""
