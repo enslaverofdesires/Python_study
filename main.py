@@ -66,44 +66,44 @@
 
 
 
-#Calculator 
+# #Calculator 
 
-a = int(input("Введите первое число:\n"))
-operand = input("какое действие необходимо выполнить:\n")
-if operand == "^":
-	b = int(input("степень корня?:\n"))
-	res = (a ** (1./b))
-elif operand == "**":
-	b = int(input("В какую степень возвести?:\n"))
-	res	= (a ** b)	
-else: 
-	b = int(input("Введите второе число:\n"))
-	if	operand == "+":
-		res = (a + b)
-	elif operand == "-":
-		res = (a - b)
-	elif operand == "*":
-		res = (a * b)
-	elif operand == "/":	
-		if b > a:
-			res = 0
-			print("Нацело не делится")
-		elif b == 0:
-			try:
-				res = a / b
-			except ZeroDivisionError:
-			    res = 0
-			print("Делитель равен 0")    
-		elif a % b == 0:
-			res = a / b
-			print("Деление без остатка")
-		else:
-			res = a % b
-			print(f"Делится с остатком. Остаток равен {res}")
-	else:
-		print("Введена не корректная операция")
-		res = "-"
-print(f"Результат вычисления равен: {round(res)}")
+# a = int(input("Введите первое число:\n"))
+# operand = input("какое действие необходимо выполнить:\n")
+# if operand == "^":
+# 	b = int(input("степень корня?:\n"))
+# 	res = (a ** (1./b))
+# elif operand == "**":
+# 	b = int(input("В какую степень возвести?:\n"))
+# 	res	= (a ** b)	
+# else: 
+# 	b = int(input("Введите второе число:\n"))
+# 	if	operand == "+":
+# 		res = (a + b)
+# 	elif operand == "-":
+# 		res = (a - b)
+# 	elif operand == "*":
+# 		res = (a * b)
+# 	elif operand == "/":	
+# 		if b > a:
+# 			res = 0
+# 			print("Нацело не делится")
+# 		elif b == 0:
+# 			try:
+# 				res = a / b
+# 			except ZeroDivisionError:
+# 			    res = 0
+# 			print("Делитель равен 0")    
+# 		elif a % b == 0:
+# 			res = a / b
+# 			print("Деление без остатка")
+# 		else:
+# 			res = a % b
+# 			print(f"Делится с остатком. Остаток равен {res}")
+# 	else:
+# 		print("Введена не корректная операция")
+# 		res = "-"
+# print(f"Результат вычисления равен: {round(res)}")
 
 # #делится/не делится
 # x = int(input("Введите первое число:\n"))
@@ -113,7 +113,7 @@ print(f"Результат вычисления равен: {round(res)}")
 # else:
 # 	res = x % y
 # 	print(f"Нацело не делится. Остаток равен {res}")
-# """
+"""
 
 # #пароль
 # """
@@ -123,6 +123,7 @@ print(f"Результат вычисления равен: {round(res)}")
 # 	print("Пароль принят")
 # else:
 # 	print("Пароль не принят")
+
 # """
 
 # #дележ яблок
@@ -149,7 +150,7 @@ print(f"Результат вычисления равен: {round(res)}")
 # 	print("\nYES")
 # else:
 # 	print("\nDON`T KNOW")
-# """
+# # """
 
 # #наименьшее из четырех чисел
 # """
@@ -213,34 +214,34 @@ print(f"Результат вычисления равен: {round(res)}")
 
 # #рулетка
 # """
-# a = "черный"
-# b = "красный"
-# c = "зеленый"
-# x = int(input("Введите число: "))
-# if x == 0:
-# 	print(c)
-# if x > 36:
-# 	print("ERROR")	
-# elif x >= 29 or x <= 36:
-# 	if x % 2 == 0:
-# 		print(b)
-# 	else:
-# 		print(a)	
-# elif x >= 19 or x <= 28:
-# 	if x % 2 == 0:
-# 		print(a)	
-# 	else:
-# 		print(b)
-# elif x >= 11 or x <= 18:
-# 	if x % 2 == 0:
-# 		print(b)
-# 	else:
-# 		print(a)		
-# elif x >= 1 or x <= 10:
-# 	if x % 2 == 0:
-# 		print(a)
-# 	else:
-# 		print(b)
+a = "черный"
+b = "красный"
+c = "зеленый"
+x = int(input("Введите число: "))
+if x == 0:
+	print(c)
+elif 28 < x < 37: 
+	if x % 2 == 0:
+		print(b)
+	else:
+		print(a)	
+elif 18 < x < 29:
+	if x % 2 == 0:
+		print(a)	
+	else:
+		print(b)
+elif 10 < x < 19:
+	if x % 2 == 0:
+		print(b)
+	else:
+		print(a)		
+elif 0 < x < 11:
+	if x % 2 == 0:
+		print(a)
+	else:
+		print(b)
+else:
+    print("ошибка ввода")
 # """	
 	
 # #algorithm tasks
