@@ -309,3 +309,56 @@
 # h = c+a+b
 # j = c+b+a
 # print(max(d, e, f, g, h, j))
+
+
+
+# def mylist(m3, m2, amount, l):
+#     from random import randint
+#     for i in range(amount):
+#         l.append(randint(m3, m2))
+# def analysis(your_list, your_dict):
+#     for i in your_list:
+#         if i in your_dict:
+#             your_dict[i] += 1
+#         else:
+#             your_dict[i] = 1
+#
+#
+# lst = []
+# dct = {}
+#
+# mn = int(input('Минимум: '))
+# mx = int(input('Максимум: '))
+# qty = int(input('Количество элементов: '))
+#
+# mylist(mn, mx, qty, lst)
+# analysis(lst, dct)
+# print(dct)
+# for item in sorted(dct):
+#     print("'%d':%d" % (item, dct[item]))
+
+
+
+
+##############################################################################
+
+import openpyxl as xl
+import random
+wb = xl.Workbook("")
+ws = wb.active
+ws.title = "Task 1"
+for row in ws.iter_rows(1, 1000):
+    for col in ws.iter_cols(1, 2):
+        for cell in row:
+            for cell in col:
+                cell.value = random.randrange(1, 1000)
+
+for row in range(1, 1000):
+    a = int(ws.cell(row, 1).value)
+    b = int(ws.cell(row, 2).value)
+    multi_action = a * b + a
+    result_cell = ws.cell(row, 3)
+    result_cell.value = multi_action
+
+wb.save("Excel_test.xlsx")
+wb.close
