@@ -341,24 +341,49 @@
 
 
 ##############################################################################
+# import openpyxl as xl
+# import random
+# wb = xl.Workbook("")
+# ws = wb.active
+# ws.title = "Task 1"
+# for row in ws.iter_rows(1, 1000):
+#     for col in ws.iter_cols(1, 2):
+#         for cell in row:
+#             for cell in col:
+#                 cell.value = random.randrange(1, 1000)
+#
+# for row in range(1, 1000):
+#     a = int(ws.cell(row, 1).value)
+#     b = int(ws.cell(row, 2).value)
+#     multi_action = a * b + a
+#     result_cell = ws.cell(row, 3)
+#     result_cell.value = multi_action
+#
+# wb.save("Excel_test.xlsx")
+# wb.close
+#
+# import json
+# import requests
+# url = 'https://webhook.site/1993418b-a272-4859-8693-766ec23628b8'
+# x = requests.get(url)
+# y = json.loads(x.text)
+# for i in y:
+#     if i['eyeColor'] == "green":
+#         print(i['name']['last'])
 
-import openpyxl as xl
-import random
-wb = xl.Workbook("")
-ws = wb.active
-ws.title = "Task 1"
-for row in ws.iter_rows(1, 1000):
-    for col in ws.iter_cols(1, 2):
-        for cell in row:
-            for cell in col:
-                cell.value = random.randrange(1, 1000)
 
-for row in range(1, 1000):
-    a = int(ws.cell(row, 1).value)
-    b = int(ws.cell(row, 2).value)
-    multi_action = a * b + a
-    result_cell = ws.cell(row, 3)
-    result_cell.value = multi_action
+import requests
 
-wb.save("Excel_test.xlsx")
-wb.close
+url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
+
+payload = "q=Hello&target=es&source=en"
+headers = {
+    'content-type': "application/x-www-form-urlencoded",
+    'accept-encoding': "application/gzip",
+    'x-rapidapi-host': "google-translate1.p.rapidapi.com",
+    'x-rapidapi-key': "c4b87b0e9amshec0aba07aa4ee18p1d8d96jsnc440ac3c2795"
+    }
+
+response = requests.request("POST", url, data=payload, headers=headers)
+
+print(response.text)

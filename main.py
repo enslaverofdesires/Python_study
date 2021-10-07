@@ -63,8 +63,7 @@
 # print("Следующее за числом " + str(x) + " число: " + str(x + 1))
 # print("Для числа " + str(x) + " предыдущее число: " + str(x - 1))
 
-
-
+##############################################################################
 
 # #Calculator 
 
@@ -214,34 +213,34 @@
 
 # #рулетка
 # """
-a = "черный"
-b = "красный"
-c = "зеленый"
-x = int(input("Введите число: "))
-if x == 0:
-	print(c)
-elif 28 < x < 37: 
-	if x % 2 == 0:
-		print(b)
-	else:
-		print(a)	
-elif 18 < x < 29:
-	if x % 2 == 0:
-		print(a)	
-	else:
-		print(b)
-elif 10 < x < 19:
-	if x % 2 == 0:
-		print(b)
-	else:
-		print(a)		
-elif 0 < x < 11:
-	if x % 2 == 0:
-		print(a)
-	else:
-		print(b)
-else:
-    print("ошибка ввода")
+# a = "черный"
+# b = "красный"
+# c = "зеленый"
+# x = int(input("Введите число: "))
+# if x == 0:
+# 	print(c)
+# elif 28 < x < 37: 
+# 	if x % 2 == 0:
+# 		print(b)
+# 	else:
+# 		print(a)	
+# elif 18 < x < 29:
+# 	if x % 2 == 0:
+# 		print(a)	
+# 	else:
+# 		print(b)
+# elif 10 < x < 19:
+# 	if x % 2 == 0:
+# 		print(b)
+# 	else:
+# 		print(a)		
+# elif 0 < x < 11:
+# 	if x % 2 == 0:
+# 		print(a)
+# 	else:
+# 		print(b)
+# else:
+#     print("ошибка ввода")
 # """	
 	
 # #algorithm tasks
@@ -275,3 +274,16 @@ else:
 # # 	x = 10 - h
 # print(x, y)
 # """
+
+
+
+phrase = ['HELLO', 'I', 'AM', 'WRITING', 'CODE']
+phrase.sort()
+print(phrase)
+
+
+
+
+
+
+
